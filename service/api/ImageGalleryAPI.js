@@ -14,6 +14,7 @@ export const ImageGalleryAPI = createApi({
       }),
       providesTags : ["ImageGalleryAPI"]
     }),
+
     uploadImage:builder.mutation({
       query : (images) => ({
          url : "create",
@@ -22,6 +23,7 @@ export const ImageGalleryAPI = createApi({
       }),
       invalidatesTags : ["ImageGalleryAPI"]
     }),
+    
     deleteMultipleImage:builder.mutation({
       query : (ids) =>({
         url : "deleteAllPhoto",
